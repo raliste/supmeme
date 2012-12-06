@@ -35,6 +35,10 @@ section#articles {
   width: 600px;
 }
 
+section#articles article:last-child {
+  border-bottom: none;
+}
+
 article {
   margin-bottom: 20px;
   padding-bottom: 20px;
@@ -44,6 +48,11 @@ article {
 article h2 {
   font-size: 16px;
   display: inline;
+}
+
+article em {
+  font-style: normal;
+  color: #999;
 }
 
 #disclaimer {

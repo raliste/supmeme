@@ -10,7 +10,9 @@ FEED_LIST = [
   ('Webprendedor', 'http://webprendedor.com/feed/'),
   ('Andes Beat', 'http://andesbeat.com/feed/'),
   ('Diario Emprendimiento', 'http://www.diarioemprendimiento.cl/feed'),
-  ('Star-Up Chile', 'http://startupchile.org/feed/')
+  ('Star-Up Chile', 'http://startupchile.org/feed/'),
+  ('Atrevete Hoy', 'http://feeds2.feedburner.com/AtreveteHoy'),
+  ('Asech', 'http://asech.cl/feed/'),
 ]
 
 
@@ -50,4 +52,5 @@ def index(entry, name):
 
 if __name__ == '__main__':
   for feed in FEED_LIST:
+    print 'Processing feed %s (%s)' % feed
     parse_feed(feed)

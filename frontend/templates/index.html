@@ -2,19 +2,19 @@
 
 {% block content %}
 
-<h1>Noticias Principales <em>Top News</em></h1>
-
-{% for score, entry in entries %}
+<h1>Top News <em>Noticias Top</em></h1>
 <section id="articles">
-  <article id="article{{ entry._id }}" data-score="{{ score }}">
+{% for score, entry in entries %}
+  <article data-id="{{ entry._id }}" data-score="{{ score }}">
     <aside class="source">{{ entry.source }}</aside>
-    <h2><a href="{{ entry.link }}">{{ entry.title }}</a></h2>
+    <h2><a href="{{ entry.link }}" target="blank">{{ entry.title }}</a></h2>
     {{ entry.description|safe }}
+    <em>{{ entry.published_at|timesince }}</em>
     {% if request.args.deb %}
     <p><small>{{ entry.published_at }} - {{ score }}</small></p>
     {% endif %}
   </article>
-</section>
 {% endfor %}
+</section>
 
 {% endblock %}
