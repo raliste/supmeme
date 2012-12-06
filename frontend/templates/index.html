@@ -3,12 +3,16 @@
 {% block content %}
 
 <h1>Noticias Principales <em>Top News</em></h1>
-{% for entry in entries %}
+
+{% for score, entry in entries %}
 <section id="articles">
-  <article id="article{{ entry._id }}">
+  <article id="article{{ entry._id }}" data-score="{{ score }}">
     <aside class="source">{{ entry.source }}</aside>
     <h2><a href="{{ entry.link }}">{{ entry.title }}</a></h2>
-    {{ entry.description }}
+    {{ entry.description|safe }}
+    {% if request.args.deb %}
+    <p><small>{{ entry.published_at }} - {{ score }}</small></p>
+    {% endif %}
   </article>
 </section>
 {% endfor %}
