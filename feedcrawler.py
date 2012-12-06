@@ -6,7 +6,7 @@ import time
 
 DB_NAME = 'supmeme2'
 
-feed_list = [
+FEED_LIST = [
   ('Webprendedor', 'http://webprendedor.com/feed/'),
   ('Andes Beat', 'http://andesbeat.com/feed/'),
   ('Diario Emprendimiento', 'http://www.diarioemprendimiento.cl/feed'),
@@ -49,5 +49,5 @@ def index(entry, name):
 
 
 if __name__ == '__main__':
-  for feed in feed_list:
+  for feed in FEED_LIST:
     parse_feed(feed)
