@@ -37,14 +37,20 @@ section#articles {
 
 article {
   margin-bottom: 20px;
-  border-bottom: solid 1px #CCC;
-}
-
-section#articles article:last-child {
-  border-bottom: none;
+  padding-bottom: 20px;
+  border-bottom: solid 1px #DDD;
 }
 
 article h2 {
   font-size: 16px;
   display: inline;
+}
+
+#disclaimer {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 11px;
+  border-bottom: solid 1px #CCC;
+  margin-bottom: 23px;
+  background-color: whitesmoke;
 }
