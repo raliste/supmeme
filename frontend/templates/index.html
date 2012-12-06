@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Noticias Principales <em>Top News</em></h1>
+{% for entry in entries %}
+<section id="articles">
+  <article id="article{{ entry._id }}">
+    <aside class="source">{{ entry.source }}</aside>
+    <h2><a href="{{ entry.link }}">{{ entry.title }}</a></h2>
+    {{ entry.description }}
+  </article>
+</section>
+{% endfor %}
+
+{% endblock %}
