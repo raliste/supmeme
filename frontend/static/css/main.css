@@ -26,6 +26,10 @@ h1 em {
   font-size: 13px;
 }
 
+.right {
+  float: right;
+}
+
 #content {
   width: 980px;
   margin: 0 auto;
