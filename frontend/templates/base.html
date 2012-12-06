@@ -6,8 +6,11 @@
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans" />
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="css/main.css") }}" />
 </head>
-<body>
-  <div id="disclaimer">This is work in progress! If you want to collaborate, visit the <a href="http://github.com/raliste/supmeme">github repository</a>.</div>
+<body class="class='class=``'">
+  <div id="disclaimer">
+    <h1>supmeme <em>- local entrepreneurial news aggregator</em></h2>
+    <p>This is work in progress! If you want to collaborate, visit the <a href="http://github.com/raliste/supmeme">github repository</a>.</p>
+  </div>
   <div id="content">{% block content %}{% endblock %}</div>
 </body>
 </html>
